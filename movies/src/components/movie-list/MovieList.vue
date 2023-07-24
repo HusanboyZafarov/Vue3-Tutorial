@@ -1,17 +1,17 @@
 <template>
     <div>
-        <ul class="list-group movie-list">
+        <Box class="list-group">
             <MovieListItem v-for="movie in movies" :movie="movie" :key="movie.id" @onToggle='$emit("onToggle", $event)'
                 @onRemove="$emit('onRemove', $event)" />
-        </ul>
+        </Box>
     </div>
 </template>
 
 <script>
-import MovieListItem from '../movie-list-item/MovieListItem.vue';
+import MovieListItem from '@/components/movie-list-item/MovieListItem.vue';
 export default {
     components: {
-        MovieListItem
+        MovieListItem,
     },
     props: {
         movies: {
@@ -22,12 +22,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.movie-list {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background: #fcfaf5;
-    border-radius: 4px;
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, .15);
-}
-</style>
+<style scoped></style>

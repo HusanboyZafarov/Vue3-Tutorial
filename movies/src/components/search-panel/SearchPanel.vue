@@ -1,6 +1,5 @@
 <template>
-    <input type="text" class="d-block form-control search-input" placeholder="Kinolarni qidirish" :value="term"
-        @input="changeHandler">
+    <Input class="d-block search-input" placeholder="Kinolarni qidirish" v-model="term" @input="changeHandler" />
 </template> 
 
 <script>
