@@ -28,13 +28,15 @@ export default {
                 views: this.views,
                 favourite: false,
                 like: false,
-                id: Date.now()
             }
             this.$emit("createMovie", newMovie)
             this.name = ""
             this.views = ""
         }
     },
+    // unmounted() {
+    //     console.log('Unmouted');
+    // },
 }
 </script>
 
